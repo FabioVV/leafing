@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "leafing-f": {
+    "awleaf": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -28,7 +28,12 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -58,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "leafing-f:build:production"
+              "buildTarget": "awleaf:build:production"
             },
             "development": {
-              "buildTarget": "leafing-f:build:development"
+              "buildTarget": "awleaf:build:development"
             }
           },
           "defaultConfiguration": "development"
