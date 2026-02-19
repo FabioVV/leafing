@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "leafing",
+  "outputfilename": "leafing",
+  "frontend:build": "npx bun run --cwd ./leafing-f build ",
+  "frontend:install": "bun --cwd ./leafing-f install",
+  "frontend:dev:watcher": "npx bun run --cwd ./leafing-f start",
+  "frontend:dev:serverUrl": "http://localhost:4200",
+  "author": {
+    "name": "FabioVV",
+    "email": "fabio-varela@protonmail.com"
+  }
+}
